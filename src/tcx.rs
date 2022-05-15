@@ -541,6 +541,10 @@ impl TrainingCenterDatabase {
         serde_xml_rs::from_reader(&mut reader)
     }
 
+    pub fn from_str(file: &str) -> Result<Self, serde_xml_rs::Error> {
+        serde_xml_rs::from_str(file)
+    }
+    
     /// Calculates heart rates for all ActivityLap items. For now.
     ///
     /// # Parameters:
